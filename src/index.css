@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+:root {
+    --cor-nivel1: #FF6B6B; /* Vermelho/Rosa */
+    --cor-nivel2: #4ECDC4; /* Turquesa */
+    --cor-nivel3: #FFBE0B; /* Amarelo */
+    --cor-nivel4: #A06CD5; /* Roxo */
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    -webkit-print-color-adjust: exact;
+}
+
+/* Página A4 */
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    page-break-after: always;
+    background: #f0f2f5;
+    padding: 10mm 0;
+}
+
+/* Card Centralizado */
+.card {
+    width: 180mm;
+    height: 260mm;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 15px solid #fff; /* Borda externa */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorações de Nível */
+.card-n1 { border-color: var(--cor-nivel1); }
+.card-n2 { border-color: var(--cor-nivel2); }
+.card-n3 { border-color: var(--cor-nivel3); }
+.card-n4 { border-color: var(--cor-nivel4); }
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    width: 100%;
+}
+
+.badge-dia {
+    display: inline-block;
+    background: #333;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.nivel-nome {
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #888;
+}
+
+/* Área da Imagem/Ilustração */
+.ilustracao-container {
+    width: 220px;
+    height: 220px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 130px;
+    border: 5px dashed #eee;
+    margin: 20px 0;
+}
+
+/* Conteúdo Principal */
+.conteudo {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.instrucao {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 30px;
+    font-family: 'Short Stack', cursive;
+}
+
+.leitura-box {
+    width: 100%;
+    padding: 30px;
+    background: #fdfdfd;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.texto-principal {
+    font-size: 70px;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.frase-texto {
+    font-size: 45px;
+    line-height: 1.4;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.minitexto {
+    font-size: 30px;
+    text-align: left;
+    line-height: 1.6;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+/* Rodapé de Conquista */
+.footer {
+    width: 100%;
+    border-top: 3px dashed #eee;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.estrelas {
+    font-size: 50px;
+    color: #ddd;
+    margin-top: 10px;
+}
+
+/* Capa Especial */
+.capa-content {
+    text-align: center;
+}
+.capa-content h1 { font-size: 70px; color: var(--cor-nivel1); font-family: 'Short Stack'; }
+.capa-content .sub { font-size: 30px; color: #666; }
+
+@media print {
+    body {
+        background: none;
+    }
+    .page {
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+}
