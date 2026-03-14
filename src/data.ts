@@ -10,7 +10,7 @@ export interface ChallengeData {
 }
 
 const alphabet = [
-  { l: "A", i: "🍎", s: "A E I O U" }, { l: "B", i: "🎈", s: "BA BE BI BO BU" },
+  { l: "A", i: "🐝", s: "A E I O U" }, { l: "B", i: "🎈", s: "BA BE BI BO BU" },
   { l: "C", i: "🏠", s: "CA CE CI CO CU" }, { l: "D", i: "🎲", s: "DA DE DI DO DU" },
   { l: "E", i: "🐘", s: "E A I O U" }, { l: "F", i: "🍃", s: "FA FE FI FO FU" },
   { l: "G", i: "🐱", s: "GA GE GI GO GU" }, { l: "H", i: "🚁", s: "HA HE HI HO HU" },
